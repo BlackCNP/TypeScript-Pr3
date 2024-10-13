@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Система управління розкладом</title>
+  
+    
+</head>
+<body>
+    <h1>Система управління розкладом в університеті</h1>
+
+    <section id="add-professor">
+        <h2>Додати професора</h2>
+        <label for="prof-id">ID:</label>
+        <input type="number" id="prof-id"><br>
+        <label for="prof-name">Ім'я:</label>
+        <input type="text" id="prof-name"><br>
+        <label for="prof-department">Кафедра:</label>
+        <input type="text" id="prof-department"><br>
+        <button id="add-professor-btn">Додати професора</button>
+    </section>
+
+    <section id="add-classroom">
+        <h2>Додати аудиторію</h2>
+        <label for="class-number">Номер:</label>
+        <input type="text" id="class-number"><br>
+        <label for="class-capacity">Місткість:</label>
+        <input type="number" id="class-capacity"><br>
+        <label for="class-projector">Проектор:</label>
+        <input type="checkbox" id="class-projector"><br>
+        <button id="add-classroom-btn">Додати аудиторію</button>
+    </section>
+
+    <section id="add-course">
+        <h2>Додати курс</h2>
+        <label for="course-id">ID:</label>
+        <input type="number" id="course-id"><br>
+        <label for="course-name">Назва:</label>
+        <input type="text" id="course-name"><br>
+        <label for="course-type">Тип:</label>
+        <select id="course-type">
+            <option value="Lecture">Лекція</option>
+            <option value="Seminar">Семінар</option>
+            <option value="Lab">Лабораторна</option>
+            <option value="Practice">Практика</option>
+        </select><br>
+        <button id="add-course-btn">Додати курс</button>
+    </section>
+
+    <section id="add-lesson">
+        <h2>Додати заняття</h2>
+        <label for="lesson-id">ID:</label>
+        <input type="number" id="lesson-id"><br>
+        <label for="lesson-courseId">ID курсу:</label>
+        <input type="number" id="lesson-courseId"><br>
+        <label for="lesson-professorId">ID професора:</label>
+        <input type="number" id="lesson-professorId"><br>
+        <label for="lesson-classroom">Аудиторія:</label>
+        <input type="text" id="lesson-classroom"><br>
+        <label for="lesson-day">День тижня:</label>
+        <select id="lesson-day">
+            <option value="Monday">Понеділок</option>
+            <option value="Tuesday">Вівторок</option>
+            <option value="Wednesday">Середа</option>
+            <option value="Thursday">Четвер</option>
+            <option value="Friday">П'ятниця</option>
+        </select><br>
+        <label for="lesson-timeslot">Часовий слот:</label>
+        <select id="lesson-timeslot">
+            <option value="8:30-10:00">8:30-10:00</option>
+            <option value="10:15-11:45">10:15-11:45</option>
+            <option value="12:15-13:45">12:15-13:45</option>
+            <option value="14:00-15:30">14:00-15:30</option>
+            <option value="15:45-17:15">15:45-17:15</option>
+        </select><br>
+        <button id="add-lesson-btn">Додати заняття</button>
+    </section>
+
+    <section id="find-classrooms">
+        <h2>Знайти доступні аудиторії</h2>
+        <label for="find-day">День тижня:</label>
+        <select id="find-day">
+            <option value="Monday">Понеділок</option>
+            <option value="Tuesday">Вівторок</option>
+            <option value="Wednesday">Середа</option>
+            <option value="Thursday">Четвер</option>
+            <option value="Friday">П'ятниця</option>
+        </select><br>
+        <label for="find-timeslot">Часовий слот:</label>
+        <select id="find-timeslot">
+            <option value="8:30-10:00">8:30-10:00</option>
+            <option value="10:15-11:45">10:15-11:45</option>
+            <option value="12:15-13:45">12:15-13:45</option>
+            <option value="14:00-15:30">14:00-15:30</option>
+            <option value="15:45-17:15">15:45-17:15</option>
+        </select><br>
+        <button id="find-classrooms-btn">Знайти</button>
+    </section>
+
+    <section id="get-professor-schedule">
+        <h2>Отримати розклад професора</h2>
+        <label for="prof-schedule-id">ID професора:</label>
+        <input type="number" id="prof-schedule-id"><br>
+        <button id="get-professor-schedule-btn">Отримати розклад</button>
+    </section>
+
+    <section id="get-classroom-utilization">
+        <h2>Аналіз використання аудиторії</h2>
+        <label for="util-classroom-number">Номер аудиторії:</label>
+        <input type="text" id="util-classroom-number"><br>
+        <button id="get-classroom-utilization-btn">Отримати використання</button>
+    </section>
+
+    <section id="get-popular-course-type">
+        <h2>Найпопулярніший тип занять</h2>
+        <button id="get-popular-course-type-btn">Отримати</button>
+    </section>
+
+    <section id="reassign-classroom">
+        <h2>Перевизначити аудиторію для заняття</h2>
+        <label for="reassign-lesson-id">ID заняття:</label>
+        <input type="number" id="reassign-lesson-id"><br>
+        <label for="reassign-new-classroom">Нова аудиторія:</label>
+        <input type="text" id="reassign-new-classroom"><br>
+        <button id="reassign-classroom-btn">Перевизначити</button>
+    </section>
+
+    <section id="cancel-lesson">
+        <h2>Скасувати заняття</h2>
+        <label for="cancel-lesson-id">ID заняття:</label>
+        <input type="number" id="cancel-lesson-id"><br>
+        <button id="cancel-lesson-btn">Скасувати</button>
+    </section>
+
+    <section id="log-section">
+        <h2>Логи</h2>
+        <div id="log"></div>
+    </section>
+
+    
+    <script src="/scripts/lb_3.js"></script>
+    </body>
+</html>
